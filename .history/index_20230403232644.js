@@ -4,6 +4,7 @@ const app = express();
 const mysql = require('mysql');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Serve index.html as the homepage
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'home.html'));
