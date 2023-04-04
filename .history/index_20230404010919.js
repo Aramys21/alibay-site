@@ -14,15 +14,8 @@ const pool = new Pool({
 
 app.use(express.static(path.join(__dirname, 'public')));
 // Serve index.html as the homepage
-app.get('/', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM users');
-    const users = result.rows;
-    res.sendFile(__dirname + '/home.html');
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Internal server error');
-  }
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
 app.listen(3060, () => {
