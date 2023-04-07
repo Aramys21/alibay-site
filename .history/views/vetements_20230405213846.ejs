@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<title>Vetements</title>
+</head>
+
+<body>
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left side-bar" style="display:none" id="mySidebar">
+		<!-- Side bar Menu -->
+		<div class="sidebar-language">
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">EN</button>
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">FR</button>
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">ع</button>
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">Россия</button>
+		</div>
+		<!-- contents of side bar -->
+		<a class="w3-bar-item sidebar-title">Compte</a>
+		<a href="login.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src/icons/account-white-icon.svg" style="height:12px;"> Login</a>
+		<a href="register.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src/icons/account-add-icon.svg" style="height:12px;"> Register</a>
+		<!-- separator -->
+		<a class="w3-bar-item sidebar-title">Categories</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/car-icon.svg"
+				style="height:18px;"> Véhicules</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/battery-icon.svg"
+				style="height:18px;"> piéces détachées</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/android-icon.svg"
+				style="height:18px;"> Téléphones</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/headphones-icon.svg"
+				style="height:18px;"> Accessoires de téléphones</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/appliance-icon.svg"
+				style="height:18px;"> Electronique et electroménager</a>
+		<a href="vetements.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src/icons/clothes-icon.svg" style="height:18px;"> Vétements</a>
+				<a href="vetements.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+					src="src/icons/animal.png" style="height:18px;">Animaux</a>
+		<a href="vetements.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src/icons/services.png" style="height:18px;"> Services</a>
+		<a href="vetements.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src/icons/currency.png" style="height:18px;"> Change/Devises</a>
+		<a href="vetements.ejs" class="w3-bar-item sidebar-link"><img class="search-icon"
+				src="src\icons\bitcoin.png" style="height:18px;"> CryptoMonnaies</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/perfume-icon.svg"
+				style="height:18px;"> Cosmetique et beauté</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/watch-icon.svg"
+				style="height:18px;"> Accessoire de mode</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/auction.png"
+				style="height:18px;">Enchères</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/battery-icon.svg"
+				style="height:18px;"> Devise</a>
+	</div>
+
+	<div id="navbar" class="navbar">
+		<a href="#" id="openNav" class="w3-large navbar-first" onclick="menu_click()"><svg width="22" height="14"
+				viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M0.785714 2.57143H21.2143C21.6482 2.57143 22 2.31561 22 2V0.571429C22 0.255821 21.6482 0 21.2143 0H0.785714C0.351754 0 0 0.255821 0 0.571429V2C0 2.31561 0.351754 2.57143 0.785714 2.57143ZM0.785714 8.28571H21.2143C21.6482 8.28571 22 8.02989 22 7.71429V6.28571C22 5.97011 21.6482 5.71429 21.2143 5.71429H0.785714C0.351754 5.71429 0 5.97011 0 6.28571V7.71429C0 8.02989 0.351754 8.28571 0.785714 8.28571ZM0.785714 14H21.2143C21.6482 14 22 13.7442 22 13.4286V12C22 11.6844 21.6482 11.4286 21.2143 11.4286H0.785714C0.351754 11.4286 0 11.6844 0 12V13.4286C0 13.7442 0.351754 14 0.785714 14Z"
+					fill="white" />
+			</svg>
+		</a>
+		<div class="navbar__logo"><a href="/"><img src="src/images/logo-ab.png"
+					style="width:8%;height:auto;" />AliBey</a></div>
+		<div class="navbar__search">
+			<a class="search-icon-link" href="#"><img class="search-icon" src="src/icons/search-icon.svg"
+					style="width:22px;"></a>
+			<input type="text" placeholder="Search" class="navbar__search__input" />
+		</div>
+		<div class="navbar__links">
+
+
+			<div class="dropdown">
+				<a href="#" class="dropbtn"><img class="nav-icons" src="src/icons/cart-icon.svg"></a>
+				<div id="dropdown-cart" class="dropdown-content">
+					<p>My Cart</p>
+					<a href="#"><img class="search-icon" src="src/icons/clothes-icon.svg"> Link 1</a>
+					<a href="#"><img class="search-icon" src="src/icons/watch-icon.svg"> Link 2</a>
+					<a href="#"><img class="search-icon" src="src/icons/appliance-icon.svg"> Link 3</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<a href="ad_list.ejs" class="dropbtn"><img class="nav-icons" src="src/icons/add-icon.svg"></a>
+			</div>
+
+			<div class="dropdown">
+				<a href="#" class="dropbtn"><img class="nav-icons" src="src/icons/account-icon.svg"></a>
+				<div id="dropdown-acc" class="dropdown-content">
+					<p>My Account</p>
+					<div class="dropdown-acc-info-container">
+						<div class="dropdown-acc-icon"><img id="dropdown-account-icon" src="src/icons/account-icon.svg">
+						</div>
+						<a id="dropdown-acc-username">WexDex</a>
+					</div>
+
+					<a href="#">Disconnect</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		function menu_click() {
+			if (document.getElementById("mySidebar").style.display === "none") {
+				document.getElementById("mySidebar").style.left = "0";
+				document.getElementById("mySidebar").style.width = "15%";
+				document.getElementById("mySidebar").style.display = "block";
+			}
+			else {
+				document.getElementById("mySidebar").style.display = "none";
+			}
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+
+	<!-- Body Start -->
+	<div id="container" style="display:flex;">
+		<div class="left">ADS 1; STRETCH TO PAGE HEIGHT</div>
+		<div class="main">
+			<!-- ADS -->
+			<div class="ad-box">
+				<p>ADS</p>
+			</div>
+
+			<!-- Categories -->
+			<div class="category-links">
+                <a href="#" class="category-link">
+                    <!-- change class to "active-category" if it's the selected category -->
+                    <div class="category-icon"><img src="src/icons/perfume-icon.svg"></div>
+                    <div class="category-text">Cosmetique et beauté</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/watch-icon.svg"></div>
+                    <div class="category-text">Accessoire de mode</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/car-icon.svg"></div>
+                    <div class="category-text">Véhicules</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/battery-icon.svg"></div>
+                    <div class="category-text">piéces détachées</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/android-icon.svg"></div>
+                    <div class="category-text">Téléphones</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/headphones-icon.svg"></div>
+                    <div class="category-text">Accessoires de téléphones</div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category-icon"><img src="src/icons/appliance-icon.svg"></div>
+                    <div class="category-text">Electronique et electroménager</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img src="src/icons/clothes-icon.svg"></div>
+                    <div class="category-text">Vétements</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img src="src/icons/ruins.png"></div>
+                    <div class="category-text">Antiquités</div>
+                </a><a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img src="src/icons/currency.png"></div>
+                    <div class="category-text">Devise</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img class="icn" src="src/icons/auction.png"></div>
+                    <div class="category-text">Enchères</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img class="icn" src="src/icons/animal.png"></div>
+                    <div class="category-text">Animaux</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img class="icn" src="src/icons/services.png"></div>
+                    <div class="category-text">Services</div>
+                </a>
+                <a href="vetements.ejs" class="category-link">
+                    <div class="category-icon"><img class="icn" src="src/icons/bitcoin.png"></div>
+                    <div class="category-text">Cryptocurrency</div>
+                </a>
+
+			</div>
+			<!-- Filter Search bar -->
+			<div class="filter-container">
+				<div class="filter-bar">
+					<input type="text" placeholder="Search" />
+					<a class="filter-search-icon-link" href="#"><img class="search-icon" src="src/icons/search-icon.svg"
+							style="width:22px;"></a>
+				</div>
+				<div class="filter-dropdown">
+					<button class="filter-btn">Filter</button>
+					<div class="filter-content">
+						<form>
+							<label for="wilaya">pays:</label>
+							<select id="wilaya" name="wilaya">
+								<option value="AF">Afghanistan</option>
+        <option value="ZA">Afrique du Sud</option>
+        <option value="AL">Albanie</option>
+        <option value="DZ">Algérie</option>
+        <option value="DE">Allemagne</option>
+        <option value="MK">Ancienne République yougoslave de Macédoine</option>
+        <option value="AD">Andorre</option>
+        <option value="AO">Angola</option>
+        <option value="AI">Anguilla</option>
+        <option value="AQ">Antarctique</option>
+        <option value="AG">Antigua-et-Barbuda</option>
+        <option value="AN">Antilles néerlandaises</option>
+        <option value="SA">Arabie saoudite</option>
+        <option value="AR">Argentine</option>
+        <option value="AM">Arménie</option>
+        <option value="AW">Aruba</option>
+        <option value="AU">Australie</option>
+        <option value="AT">Autriche</option>
+        <option value="AZ">Azerbaïdjan</option>
+    </optgroup>
+    <optgroup label="B">
+<option value="BS">Bahamas</option>
+        <option value="BH">Bahreïn</option>
+        <option value="BD">Bangladesh</option>
+        <option value="BB">Barbade</option>
+        <option value="BE">Belgique</option>
+        <option value="BZ">Belize</option>
+        <option value="BJ">Bénin</option>
+        <option value="BM">Bermudes</option>
+        <option value="BT">Bhoutan</option>
+        <option value="BY">Biélorussie</option>
+        <option value="BO">Bolivie</option>
+        <option value="BA">Bosnie-et-Herzégovine</option>
+        <option value="BW">Botswana</option>
+        <option value="BR">Brésil</option>
+        <option value="BN">Brunei Darussalam</option>
+        <option value="BG">Bulgarie</option>
+        <option value="BF">Burkina Faso</option>
+        <option value="BI">Burundi</option>
+    </optgroup>
+    <optgroup label="C">
+<option value="KH">Cambodge</option>
+        <option value="CM">Cameroun</option>
+        <option value="CA">Canada</option>
+        <option value="CV">Cap-Vert</option>
+        <option value="CL">Chili</option>
+        <option value="CN">Chine</option>
+        <option value="CY">Chypre</option>
+        <option value="CO">Colombie</option>
+        <option value="KM">Comores</option>
+        <option value="CG">Congo</option>
+        <option value="CR">Costa Rica</option>
+        <option value="CI">Côte d'Ivoire</option>
+        <option value="HR">Croatie</option>
+        <option value="CU">Cuba</option>
+    </optgroup>
+    <optgroup label="D">
+<option value="DK">Danemark</option>
+        <option value="DJ">Djibouti</option>
+        <option value="DM">Dominique</option>
+    </optgroup>
+    <optgroup label="E">
+<option value="EG">Égypte</option>
+        <option value="SV">El Salvador</option>
+        <option value="AE">Émirats arabes unis</option>
+        <option value="EC">Équateur</option>
+        <option value="ER">Érythrée</option>
+        <option value="ES">Espagne</option>
+        <option value="EE">Estonie</option>
+        <option value="FM">États fédérés de Micronésie</option>
+        <option value="US">États-Unis</option>
+        <option value="ET">Éthiopie</option>
+    </optgroup>
+    <optgroup label="F">
+<option value="FJ">Fidji</option>
+        <option value="FI">Finlande</option>
+        <option value="FR">France</option>
+    </optgroup>
+    <optgroup label="G">
+<option value="GA">Gabon</option>
+        <option value="GM">Gambie</option>
+        <option value="GE">Géorgie</option>
+        <option value="GS">Géorgie du Sud-et-les Îles Sandwich du Sud</option>
+        <option value="GH">Ghana</option>
+        <option value="GI">Gibraltar</option>
+        <option value="GR">Grèce</option>
+        <option value="GD">Grenade</option>
+        <option value="GL">Groenland</option>
+        <option value="GP">Guadeloupe</option>
+        <option value="GU">Guam</option>
+        <option value="GT">Guatemala</option>
+        <option value="GN">Guinée</option>
+        <option value="GQ">Guinée équatoriale</option>
+        <option value="GW">Guinée-Bissau</option>
+        <option value="GY">Guyane</option>
+        <option value="GF">Guyane française</option>
+    </optgroup>
+    <optgroup label="H">
+<option value="HT">Haïti</option>
+        <option value="HN">Honduras</option>
+        <option value="HK">Hong Kong</option>
+        <option value="HU">Hongrie</option>
+    </optgroup>
+    <optgroup label="I">
+<option value="BV">Ile Bouvet</option>
+        <option value="CX">Ile Christmas</option>
+        <option value="NF">Île Norfolk</option>
+        <option value="PN">Île Pitcairn</option>
+        <option value="AX">Iles Aland</option>
+        <option value="KY">Iles Cayman</option>
+        <option value="CC">Iles Cocos (Keeling)</option>
+        <option value="CK">Iles Cook</option>
+        <option value="FO">Îles Féroé</option>
+        <option value="HM">Îles Heard-et-MacDonald</option>
+        <option value="FK">Îles Malouines</option>
+        <option value="MP">Îles Mariannes du Nord</option>
+        <option value="MH">Îles Marshall</option>
+        <option value="UM">Îles mineures éloignées des États-Unis</option>
+        <option value="SB">Îles Salomon</option>
+        <option value="TC">Îles Turques-et-Caïques</option>
+        <option value="VG">Îles Vierges britanniques</option>
+        <option value="VI">Îles Vierges des États-Unis</option>
+        <option value="IN">Inde</option>
+        <option value="ID">Indonésie</option>
+        <option value="IQ">Iraq</option>
+        <option value="IE">Irlande</option>
+        <option value="IS">Islande</option>
+        <option value="IL">Israël</option>
+        <option value="IT">Italie</option>
+    </optgroup>
+    <optgroup label="J">
+<option value="LY">Jamahiriya arabe libyenne</option>
+        <option value="JM">Jamaïque</option>
+        <option value="JP">Japon</option>
+        <option value="JO">Jordanie</option>
+    </optgroup>
+    <optgroup label="K">
+<option value="KZ">Kazakhstan</option>
+        <option value="KE">Kenya</option>
+        <option value="KG">Kirghizistan</option>
+        <option value="KI">Kiribati</option>
+        <option value="KW">Koweït</option>
+    </optgroup>
+    <optgroup label="L">
+<option value="LS">Lesotho</option>
+        <option value="LV">Lettonie</option>
+        <option value="LB">Liban</option>
+        <option value="LR">Libéria</option>
+        <option value="LI">Liechtenstein</option>
+        <option value="LT">Lituanie</option>
+        <option value="LU">Luxembourg</option>
+    </optgroup>
+    <optgroup label="M">
+<option value="MO">Macao</option>
+        <option value="MG">Madagascar</option>
+        <option value="MY">Malaisie</option>
+        <option value="MW">Malawi</option>
+        <option value="MV">Maldives</option>
+        <option value="ML">Mali</option>
+        <option value="MT">Malte</option>
+        <option value="MA">Maroc</option>
+        <option value="MQ">Martinique</option>
+        <option value="MU">Maurice</option>
+        <option value="MR">Mauritanie</option>
+        <option value="YT">Mayotte</option>
+        <option value="MX">Mexique</option>
+        <option value="MC">Monaco</option>
+        <option value="MN">Mongolie</option>
+        <option value="MS">Montserrat</option>
+        <option value="MZ">Mozambique</option>
+        <option value="MM">Myanmar</option>
+    </optgroup>
+    <optgroup label="N">
+<option value="NA">Namibie</option>
+        <option value="NR">Nauru</option>
+        <option value="NP">Népal</option>
+        <option value="NI">Nicaragua</option>
+        <option value="NE">Niger</option>
+        <option value="NG">Nigéria</option>
+        <option value="NU">Niué</option>
+        <option value="NO">Norvège</option>
+        <option value="NC">Nouvelle-Calédonie</option>
+        <option value="NZ">Nouvelle-Zélande</option>
+    </optgroup>
+    <optgroup label="O">
+<option value="OM">Oman</option>
+        <option value="UG">Ouganda</option>
+        <option value="UZ">Ouzbékistan</option>
+    </optgroup>
+    <optgroup label="P">
+<option value="PK">Pakistan</option>
+        <option value="PW">Palaos</option>
+        <option value="PA">Panama</option>
+        <option value="PG">Papouasie-Nouvelle-Guinée</option>
+        <option value="PY">Paraguay</option>
+        <option value="NL">Pays-Bas</option>
+        <option value="PE">Pérou</option>
+        <option value="PH">Philippines</option>
+        <option value="PL">Pologne</option>
+        <option value="PF">Polynésie française</option>
+        <option value="PR">Porto Rico</option>
+        <option value="PT">Portugal</option>
+        <option value="TW">Province chinoise de Taiwan</option>
+    </optgroup>
+    <optgroup label="Q">
+<option value="QA">Qatar</option>
+    </optgroup>
+    <optgroup label="R">
+<option value="SY">République arabe syrienne</option>
+        <option value="CF">République centrafricaine</option>
+        <option value="KR">République de Corée</option>
+        <option value="MD">République de Moldavie</option>
+        <option value="CD">République démocratique du Congo</option>
+        <option value="DO">République dominicaine</option>
+        <option value="IR">République islamique d'Iran</option>
+        <option value="KP">République populaire démocratique de Corée</option>
+        <option value="LA">République Populaire du Laos</option>
+        <option value="CZ">République tchèque</option>
+        <option value="TZ">République-Unie de Tanzanie</option>
+        <option value="RE">Réunion</option>
+        <option value="RO">Roumanie</option>
+        <option value="GB">Royaume-Uni</option>
+        <option value="RU">Russie</option>
+        <option value="RW">Rwanda</option>
+    </optgroup>
+    <optgroup label="S">
+<option value="EH">Sahara occidental</option>
+        <option value="KN">Saint-Christophe-et-Niévès</option>
+        <option value="SM">Saint-Marin</option>
+        <option value="PM">Saint-Pierre-et-Miquelon</option>
+        <option value="VA">Saint-Siège (Cité du Vatican)</option>
+        <option value="VC">Saint-Vincent-et-les Grenadines</option>
+        <option value="SH">Sainte-Hélène</option>
+        <option value="LC">Sainte-Lucie</option>
+        <option value="WS">Samoa</option>
+        <option value="AS">Samoa américaines</option>
+        <option value="ST">Sao Tomé-et-Principe</option>
+        <option value="SN">Sénégal</option>
+        <option value="CS">Serbie-et-Monténégro</option>
+        <option value="SC">Seychelles</option>
+        <option value="SL">Sierra Leone</option>
+        <option value="SG">Singapour</option>
+        <option value="SK">Slovaquie</option>
+        <option value="SI">Slovénie</option>
+        <option value="SO">Somalie</option>
+        <option value="SD">Soudan</option>
+        <option value="LK">Sri Lanka</option>
+        <option value="SE">Suède</option>
+        <option value="CH">Suisse</option>
+        <option value="SR">Suriname</option>
+        <option value="SJ">Svalbard et Jan Mayen</option>
+        <option value="SZ">Swaziland</option>
+    </optgroup>
+    <optgroup label="T">
+<option value="TJ">Tadjikistan</option>
+        <option value="TD">Tchad</option>
+        <option value="IO">Territoire britannique de l'océan Indien</option>
+        <option value="TF">Territoire Francais du Sud</option>
+        <option value="PS">Territoires palestiniens occupés</option>
+        <option value="TH">Thaïlande</option>
+        <option value="TL">Timor oriental</option>
+        <option value="TG">Togo</option>
+        <option value="TK">Tokelau</option>
+        <option value="TO">Tonga</option>
+        <option value="TT">Trinité-et-Tobago</option>
+        <option value="TN">Tunisie</option>
+        <option value="TM">Turkménistan</option>
+        <option value="TR">Turquie</option>
+        <option value="TV">Tuvalu</option>
+    </optgroup>
+    <optgroup label="U">
+<option value="UA">Ukraine</option>
+        <option value="UY">Uruguay</option>
+    </optgroup>
+    <optgroup label="V">
+<option value="VU">Vanuatu</option>
+        <option value="VE">Vénézuéla</option>
+        <option value="VN">Vietnam</option>
+    </optgroup>
+    <optgroup label="W">
+<option value="WF">Wallis-et-Futuna</option>
+    </optgroup>
+    <optgroup label="Y">
+<option value="YE">Yémen</option>
+    </optgroup>
+    <optgroup label="Z">
+<option value="ZM">Zambie</option>
+        <option value="ZW">Zimbabwe</option>
+    </optgroup>
+</select>
+							</select>
+							<!-- <br> -->
+
+							<label for="mark">Marque:</label>
+							<select id="mark" name="mark">
+								<option value="">-- Selectionner une marque --</option>
+								<option value="Mark A">Dacia</option>
+								<option value="Mark B">BMW</option>
+								<option value="Mark C">Renault</option>
+							</select>
+							<!-- <br> -->
+
+							<label for="clr">Couleur:</label>
+							<select id="clr" name="clr">
+								<option value="">-- Selectionner une couleur --</option>
+								<option value="red">Rouge</option>
+								<option value="blue">Bleu</option>
+								<option value="green">Vert</option>
+							</select>
+							<!-- <br> -->
+
+							<label for="min-price">Min Price:</label>
+							<input type="number" id="min-price" name="min-price" min="0" max="100000">
+							<!-- <br> -->
+
+							<label for="max-price">Max Price:</label>
+							<input type="number" id="max-price" name="max-price" min="0" max="100000">
+							<!-- <br> -->
+
+							<button type="submit">Apply Filters</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Products List  -->
+			<div class="product-list">
+				<!-- a single product start -->
+				<div class="product-card">
+					<a href="product-page.ejs"><img class="product-card-img" src="src/images/ades (1).png"
+							alt="Product Image"></a>
+					<!-- <h2>Product 1</h2> -->
+					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+					<div class="product-icons">
+						<a href="#" class="card-icon-links"><img class="card-icons" src="src/icons/like-icon.svg"></a>
+						<a href="product-page.ejs" class="card-icon-links"><img class="card-icons"
+								src="src/icons/comment-icon.svg"></a>
+						<a href="#" class="card-icon-links"><img class="card-icons"
+								src="src/icons/add-to-cart-icon.svg"></a>
+					</div>
+				</div>
+				<!-- end of one product -->
+			</div>
+
+
+		</div>
+		<div class="right">ADS 2; STRETCH TO PAGE HEIGHT</div>
+	</div>
+
+	<a href="#" class="back-to-top"></a>
+	<script>
+		const backToTopButton = document.querySelector('.back-to-top');
+
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 200) {
+				backToTopButton.classList.add('show');
+			} else {
+				backToTopButton.classList.remove('show');
+			}
+		});
+
+		backToTopButton.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+
+	</script>
+</body>
+
+</html>

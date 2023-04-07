@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="src/css/style4.css">
+    <title>Ads List Page</title>
+  </head>
+  <body>
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left side-bar" style="display:none" id="mySidebar">
+		<!-- Side bar Menu -->
+		<div class="sidebar-language">
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">ENG</button>
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">FR</button>
+			<button class="w3-bar-item w3-button w3-xlarge sidebar">عربي</button>
+		</div>
+		<!-- contents of side bar -->
+		<a class="w3-bar-item sidebar-title">Compte</a>
+		<a href="login.html" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/account-white-icon.svg" style="height:12px;"> Login</a>
+		<a href="register.html" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/account-add-icon.svg" style="height:12px;"> Register</a>
+		<!-- separator -->
+		<a class="w3-bar-item sidebar-title">Categories</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/perfume-icon.svg" style="height:18px;"> Cosmetique et beauté</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/watch-icon.svg" style="height:18px;"> Accessoire de mode</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/car-icon.svg" style="height:18px;"> Véhicules</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/battery-icon.svg" style="height:18px;"> piéces détachées</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/android-icon.svg" style="height:18px;"> Téléphones</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/headphones-icon.svg" style="height:18px;"> Accessoires de téléphones</a>
+		<a href="#" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/appliance-icon.svg" style="height:18px;"> Electronique et electroménager</a>
+		<a href="vetements.html" class="w3-bar-item sidebar-link"><img class="search-icon" src="src/icons/clothes-icon.svg" style="height:18px;"> Vétements</a>
+	</div>
+	
+   <div id="navbar" class="navbar">
+		<a href="#" id="openNav" class="w3-large navbar-first" onclick="menu_click()"><svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0.785714 2.57143H21.2143C21.6482 2.57143 22 2.31561 22 2V0.571429C22 0.255821 21.6482 0 21.2143 0H0.785714C0.351754 0 0 0.255821 0 0.571429V2C0 2.31561 0.351754 2.57143 0.785714 2.57143ZM0.785714 8.28571H21.2143C21.6482 8.28571 22 8.02989 22 7.71429V6.28571C22 5.97011 21.6482 5.71429 21.2143 5.71429H0.785714C0.351754 5.71429 0 5.97011 0 6.28571V7.71429C0 8.02989 0.351754 8.28571 0.785714 8.28571ZM0.785714 14H21.2143C21.6482 14 22 13.7442 22 13.4286V12C22 11.6844 21.6482 11.4286 21.2143 11.4286H0.785714C0.351754 11.4286 0 11.6844 0 12V13.4286C0 13.7442 0.351754 14 0.785714 14Z" fill="white"/>
+			</svg>
+			</a>
+		<div class="navbar__logo"><a href="home.html"><img src="src/images/logo-ab.png" style="width:8%;height:auto;"/>Ali bay</a></div>
+		<div class="navbar__search">
+		<a class="search-icon-link" href="#"><img class="search-icon" src="src/icons/search-icon.svg" style="width:22px;"></a>
+		<input type="text" placeholder="Search" class="navbar__search__input"/>
+		</div>
+		<div class="navbar__links">
+		
+		
+			<div class="dropdown">
+				<a href="#" class="dropbtn"><img class="nav-icons" src="src/icons/cart-icon.svg"></a>
+				<div id="dropdown-cart" class="dropdown-content">
+					<p>My Cart</p>
+					<a href="#"><img class="search-icon" src="src/icons/clothes-icon.svg"> Link 1</a>
+					<a href="#"><img class="search-icon" src="src/icons/watch-icon.svg"> Link 2</a>
+					<a href="#"><img class="search-icon" src="src/icons/appliance-icon.svg"> Link 3</a>
+				</div>
+			</div> 
+	  
+			<div class="dropdown">
+				<a href="ad_list.html" class="dropbtn"><img class="nav-icons" src="src/icons/add-icon.svg"></a>
+			</div>
+			
+			<div class="dropdown">
+				<a href="#" class="dropbtn"><img class="nav-icons" src="src/icons/account-icon.svg"></a>
+				<div id="dropdown-acc" class="dropdown-content">
+					<p>My Account</p>
+					<div class="dropdown-acc-info-container">
+						<div class="dropdown-acc-icon"><img id="dropdown-account-icon" src="src/icons/account-icon.svg"></div>
+						<a id="dropdown-acc-username">WexDex</a>
+					</div>
+					
+					<a href="#">Disconnect</a>
+				</div>
+			</div> 
+
+      </div>
+    </div>
+	<script>
+		function menu_click() {
+		  if (document.getElementById("mySidebar").style.display === "none") {
+			  document.getElementById("mySidebar").style.left = "0";
+			  document.getElementById("mySidebar").style.width = "15%";
+			  document.getElementById("mySidebar").style.display = "block";
+		  }
+		  else {
+			  document.getElementById("mySidebar").style.display = "none";
+		  }
+		}
+		function w3_close() {
+			  document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+	
+	<!-- Body Start -->
+	<div id="container" style="display:flex;">
+	<div class="left">ADS 1; STRETCH TO PAGE HEIGHT</div>
+	<div class="main">
+		<!-- ADS -->
+		<div class="ad-box">
+			<p>ADS</p>
+		</div>
+		<!-- main content -->
+		
+		<div class="list-container">
+			<div class="list-label"><h2>choose category</h2></div>
+			<!-- Item list -->
+			
+			<!-- Single item start -->
+			
+			<!-- single item end -->
+			
+			<!-- Single item start -->
+			
+			<!-- single item end -->
+			
+			<!-- Single item start -->
+			
+			<!-- single item end -->
+			
+			<!-- Single item start -->
+			<!-- <div class="list-item">
+				<a><img src="src/images/ades (2).png"></a>
+				<a>Tri poloski Adidas Pro max 20420</a>
+			</div> -->
+			<!-- single item end -->
+			<!-- Single item start -->
+			<a href="#" style="text-decoration: none;" class="list-item-a">
+				<div class="list-item">
+				<img src="src/icons/android-icon.svg">
+				<p style="font-size: larger;">androind</p>
+			</div>
+		</a>
+        <a href="#" style="text-decoration: none;" class="list-item-a">
+            <div class="list-item">
+            <img src="src\icons\animal.png">
+            <p style="font-size: larger;">Animals</p>
+        </div>
+    </a>
+    <a href="#" style="text-decoration: none;" class="list-item-a">
+        <div class="list-item">
+        <img src="src\icons\appliance-icon.svg">
+        <p style="font-size: larger;">Electro menage</p>
+    </div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src\icons\auction.png">
+    <p style="font-size: larger;">auction</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src/icons/battery-icon.svg">
+    <p style="font-size: larger;">piece detachee</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src/icons/bitcoin.png">
+    <p style="font-size: larger;">CryptoMonnaies</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src/icons/car-icon.svg">
+    <p style="font-size: larger;">Véhicules</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src/icons/clothes-icon.svg">
+    <p style="font-size: larger;">Vétements</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img src="src/icons/currency.png">
+    <p style="font-size: larger;">Devise</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img  " src="src/icons/headphones-icon.svg">
+    <p style="font-size: larger;">Accessoire</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img  " src="src/icons/perfume-icon.svg">
+    <p style="font-size: larger;">Accessoire de mode</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img  " src="src/icons/ruins.png">
+    <p style="font-size: larger;">Antiquités</p>
+</div>
+</a>
+<a href="#" style="text-decoration: none;" class="list-item-a">
+    <div class="list-item">
+    <img  " src="src/icons/services.png">
+    <p style="font-size: larger;">services</p>
+</div>
+</a>
+
+			<!-- single item end -->
+			
+		
+		</div>
+		</div>
+		
+		
+	</div>
+		<div class="right">ADS 2; STRETCH TO PAGE HEIGHT</div>
+	</div>
+	
+	<a href="#" class="back-to-top"></a>
+	<script>
+		const backToTopButton = document.querySelector('.back-to-top');
+
+		window.addEventListener('scroll', () => {
+		  if (window.scrollY > 200) {
+			backToTopButton.classList.add('show');
+		  } else {
+			backToTopButton.classList.remove('show');
+		  }
+		});
+
+		backToTopButton.addEventListener('click', () => {
+		  window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+
+	</script>
+  </body>
+</html>

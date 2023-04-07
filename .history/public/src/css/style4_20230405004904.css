@@ -1,0 +1,45 @@
+.list-container {
+	width: 90%;
+	background-color: #2D2828;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.list-label {
+	min-height: 70px;
+	max-height: 70px;
+	display: flex;
+    align-items: center;
+}
+
+.list-item {
+	min-height: 100px;
+	max-height: 100px;
+	display: flex;
+    align-items: center;
+	background-color: #FE5000;
+	
+	border: black solid 1px;
+}
+
+.list-item img {
+	height: 80px;
+	margin-left: 3%;
+}
+
+.list-container h2 {
+	color: white;
+	font-weight: bold;
+	margin-left: 10px;
+}
+a.link-list-item {
+	background-color:green;
+}
+.list-item a {
+	color: white;
+	font-size: 30;
+	font-weight: bold;
+	margin-left: 10px;
+}
+link-item-list-full {}

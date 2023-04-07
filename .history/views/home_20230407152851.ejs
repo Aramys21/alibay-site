@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="src/css/w3.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<title>Home</title>
+</head>
+
+<body>
+	<%%>
+
+		<!-- Body Start -->
+		<div id="container" style="display:flex;">
+			<div class="left">
+				<img src="src/pub/soon.jpg" id="img" >
+			</div>
+			<script  >
+				let ime = document.getElementById('img');
+						let imes = ['src/pub/1.jpg','src/pub/2.jpg','src/pub/3.jpg','src/pub/4.jpg','src/pub/5.jpg','src/pub/6.jpg','src/pub/7.jpg','src/pub/8.jpg','src/pub/9.jpg','src/pub/10.jpg','src/pub/11.jpg','src/pub/12.jpg','src/pub/13.jpg','src/pub/14.jpg','src/pub/soon.jpg'];
+						
+						setInterval(function(){
+							let random = Math.floor(Math.random() * 15);
+							ime.src = imes[random];
+						}, 1000*2.5);
+			</script>
+			<div class="main">
+				<!-- ADS -->
+				<div class="ad-box">
+					<img src="src/pub/soon.jpg" id="image">
+				</div>
+<script  >
+	let image = document.getElementById('image');
+			let images = ['src/pub/1.jpg','src/pub/2.jpg','src/pub/3.jpg','src/pub/4.jpg','src/pub/5.jpg','src/pub/6.jpg','src/pub/7.jpg','src/pub/8.jpg','src/pub/9.jpg','src/pub/10.jpg','src/pub/11.jpg','src/pub/12.jpg','src/pub/13.jpg','src/pub/14.jpg','src/pub/soon.jpg'];
+			
+			setInterval(function(){
+				let random = Math.floor(Math.random() * 15);
+				image.src = images[random];
+			}, 1000*5);
+</script>
+				<!-- Categories -->
+				<div class="category-links">
+					<a href="#" class="category-link">
+						<!-- change class to "active-category" if it's the selected category -->
+						<div class="category-icon"><img src="src/icons/perfume-icon.svg"></div>
+						<div class="category-text">Cosmetique et beauté</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/watch-icon.svg"></div>
+						<div class="category-text">Accessoire de mode</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/car-icon.svg"></div>
+						<div class="category-text">Véhicules</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/battery-icon.svg"></div>
+						<div class="category-text">piéces détachées</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/android-icon.svg"></div>
+						<div class="category-text">Téléphones</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/headphones-icon.svg"></div>
+						<div class="category-text">Accessoires de téléphones</div>
+					</a>
+					<a href="#" class="category-link">
+						<div class="category-icon"><img src="src/icons/appliance-icon.svg"></div>
+						<div class="category-text">Electronique et electroménager</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img src="src/icons/clothes-icon.svg"></div>
+						<div class="category-text">Vétements</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img src="src/icons/ruins.png"></div>
+						<div class="category-text">Antiquités</div>
+					</a><a href="/vetements" class="category-link">
+						<div class="category-icon"><img src="src/icons/currency.png"></div>
+						<div class="category-text">Devise</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img class="icn" src="src/icons/auction.png"></div>
+						<div class="category-text">Enchères</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img class="icn" src="src/icons/animal.png"></div>
+						<div class="category-text">Animaux</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img class="icn" src="src/icons/services.png"></div>
+						<div class="category-text">Services</div>
+					</a>
+					<a href="/vetements" class="category-link">
+						<div class="category-icon"><img class="icn" src="src/icons/bitcoin.png"></div>
+						<div class="category-text">Cryptocurrency</div>
+					</a>
+				</div>
+
+				<!-- Products List  -->
+				<div class="product-list">
+					<!-- a single product start -->
+					<div class="product-card">
+						<a href="/product-page"><img class="product-card-img" src="src/images/ades (1).png"
+								alt="Product Image"></a>
+						<!-- <h2>Product 1</h2> -->
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<div class="product-icons">
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/like-icon.svg"></a>
+							<a href="/product-page" class="card-icon-links"><img class="card-icons"
+									src="src/icons/comment-icon.svg"></a>
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/add-to-cart-icon.svg"></a>
+						</div>
+					</div>
+					<!-- end of one product -->
+					<!-- a single product start -->
+					<div class="product-card">
+						<a href="/product-page"><img class="product-card-img" src="src/images/ades (1).png"
+								alt="Product Image"></a>
+						<!-- <h2>Product 1</h2> -->
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<div class="product-icons">
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/like-icon.svg"></a>
+							<a href="/product-page" class="card-icon-links"><img class="card-icons"
+									src="src/icons/comment-icon.svg"></a>
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/add-to-cart-icon.svg"></a>
+						</div>
+					</div>
+					<!-- end of one product -->
+					<!-- a single product start -->
+					<div class="product-card">
+						<a href="/product-page"><img class="product-card-img" src="src/images/ades (1).png"
+								alt="Product Image"></a>
+						<!-- <h2>Product 1</h2> -->
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<div class="product-icons">
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/like-icon.svg"></a>
+							<a href="/product-page" class="card-icon-links"><img class="card-icons"
+									src="src/icons/comment-icon.svg"></a>
+							<a href="#" class="card-icon-links"><img class="card-icons"
+									src="src/icons/add-to-cart-icon.svg"></a>
+						</div>
+					</div>
+					<!-- end of one product -->
+				</div>
+
+
+			</div>
+			<div class="right"><img src="src/pub/soon.jpg" id="pub"></div>
+		</div>
+		<script  >
+			let img = document.getElementById('pub');
+					let imgs = ['src/pub/1.jpg','src/pub/2.jpg','src/pub/3.jpg','src/pub/4.jpg','src/pub/5.jpg','src/pub/6.jpg','src/pub/7.jpg','src/pub/8.jpg','src/pub/9.jpg','src/pub/10.jpg','src/pub/11.jpg','src/pub/12.jpg','src/pub/13.jpg','src/pub/14.jpg','src/pub/soon.jpg'];
+					
+					setInterval(function(){
+						let random = Math.floor(Math.random() * 15);
+						img.src = imgs[random];
+					}, 1000*3);
+		</script>
+
+<script>const backToTopButton = document.querySelector('.back-to-top');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 200) {
+			backToTopButton.classList.add('show');
+		} else {
+			backToTopButton.classList.remove('show');
+		}
+	});
+
+	backToTopButton.addEventListener('click', () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+	function menu_click() {
+		if (document.getElementById("mySidebar").style.display === "none") {
+			document.getElementById("mySidebar").style.left = "0";
+			document.getElementById("mySidebar").style.width = "15%";
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		else {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").style.display = "none";
+	}
+	</script>
+		<a href="#" class="back-to-top"></a>
+		<script src="script.js"></script>
+</body>
+
+</html>
